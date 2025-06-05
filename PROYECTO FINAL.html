@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mazda Motors</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos generales */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: #1a1a1a;
+}
+
+nav ul.menu li {
+  position: relative;
+}
+
+nav ul.menu li a {
+  display: block;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.menu li:hover > a {
+  background-color: #b30000;
+}
+
+nav ul.menu li ul {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  min-width: 150px;
+}
+
+nav ul.menu li:hover ul {
+  display: block;
+}
+
+nav ul.menu li ul li a {
+  padding: 0.5em 1em;
+}
+
+/* Secciones */
+section {
+  padding: 2em;
+  text-align: center;
+  background-color: white;
+  margin: 1em 0;
+}
+
+/* Galería */
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.galeria .imagen {
+  border: 1px solid #ccc;
+  padding: 1em;
+  background: #fff;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+}
+
+.galeria .imagen:hover {
+  transform: scale(5.05);
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin: 0.5em 0;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 0.8em;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #800000;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+@media (max-width: 768px) {
+  nav ul.menu {
+    flex-direction: column;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mazda Motors</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li class="submenu">
+          <a href="#modelos">Modelos</a>
+          <ul>
+            <li><a href="#suv">SUV</a></li>
+            <li><a href="#sedan">Sedán</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Bienvenido a Mazda</h2>
+    <p>Innovación, diseño y rendimiento en cada modelo.</p>
+  </section>
+
+  <section id="modelos">
+    <h2>Nuestros Modelos</h2>
+    <div class="galeria">
+      <div class="imagen">
+        <img src="mazda_cx5.jpg" alt="Mazda CX-5" />
+        <p>Mazda CX-5 - 145M</p>
+      </div>
+
+      <div class="imagen">
+        <img src="mazda3sdn_800x800.jpg" alt="mazda3_sedan_kv">
+        <p>Mazda 3 sedan- 115M </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modelos">
+    <h2>Nuestros Modelos</h2>
+    <div class="galeria">
+      <div class="imagen">
+        <img src="mazda cx30-O.webp" alt="" />
+        <p>Mazda cx-30 - 120M</p>
+      </div>
+
+      <div class="imagen">
+        <img src="CX-50-mobile-2.jpg" alt="mazda3_sedan_kv" >
+        <p>Mazda CX-50 -150M </p>
+      </div>
+    </div>
+  </section>
+
+    <section id="modelos">
+    <h2>Nuestros Modelos</h2>
+    <div class="galeria">
+      <div class="imagen">
+        <img src="mazda-cx-903333.jpg" alt="MAZDA CX 90" width="50000" />
+        <p>Mazda cx-90 - 180M</p>
+      </div>
+  </section>
+
+    <section id="modelos">
+      <div class="imagen">
+        <img src="MAZDA-2-.jpg" alt="mazda2_sedan_kv" >
+        <p>Mazda 2 - 75M </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Mensaje..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mazda Motors</p>
+    <!-- Icono SVG de auto deportivo estilo Mazda -->
+    <svg width="40" height="24" viewBox="0 0 640 512" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M544 192h-16l-64-96H176l-64 96H96C43 192 0 235 0 288v48c0 13.3 10.7 24 24 24h40c0 44.2 35.8 80 80 80s80-35.8 80-80h192c0 44.2 35.8 80 80 80s80-35.8 80-80h40c13.3 0 24-10.7 24-24v-48c0-53-43-96-96-96zM160 368c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm320 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/>
+    </svg>
+  </footer>
+</body>
+</html>
